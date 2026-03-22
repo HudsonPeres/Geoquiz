@@ -1,0 +1,58 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+.game-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.street-view {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  width: 20%;
+  height: auto;
+  min-height: 30%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.floating-panel button {
+  width: 100px;
+  height: 25px;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.floating-panel button:hover {
+  opacity: 0.8;
+}
+
+img {
+  padding-top: 10px;
+}
+
+
+
