@@ -5,6 +5,7 @@ import places from '../data/places';
 
 
 
+
 function GamePage() {
   const navigate = useNavigate();
   const [score, setScore] = useState(0);
@@ -37,7 +38,8 @@ function GamePage() {
     }
 
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCWv382ndu6yjqkXsq9xCbrNj10-kMEGuQ&callback=initMap&libraries=&v=weekly`;
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap&libraries=&v=weekly`;
     script.async = true;
     script.defer = true;
     window.initMap = () => {
