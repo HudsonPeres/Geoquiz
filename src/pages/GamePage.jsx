@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './GamePage.css';
 import places from '../data/places';
+import { saveScore } from '../utils/leaderboard';
 
 
 
@@ -70,9 +71,16 @@ script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=ini
       setScore(newScore);
       alert(`Acertô Mizeravi! Placar atual: ${newScore}`);
     } else {
+      const currentScore = score;
+      if(currentScore > 0) {
+         const nome = window.prompt('Errô Mizeravi! Diz teu nome ai:')  
+        if (nome && nome.trim()) {
+          saveScore(nome, currentScore);
+        }    
+      }
       setScore(0);
-      alert(`Errô Mizeravi! Placar atual: 0`);
-    }
+      alert(`Recomeça Mizeravi! Placar atual: 0`);
+      }
     setCurrentPlace(pickRandomPlace());
   };
 
