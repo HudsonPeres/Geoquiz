@@ -26,6 +26,7 @@ function GamePage() {
         position: place[0],
         pov: { heading: 165, pitch: 0 },
         zoom: 1,
+        disableDefaultUI: true,
       }
     );
   };
