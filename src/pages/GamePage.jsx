@@ -93,7 +93,7 @@ script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=ini
     <div className="game-container">
       <div id="floating-panel" className="floating-panel">
         <img
-          src=".\img\treasure-map.png"
+          src="https://cdn-icons-gif.flaticon.com/17270/17270711.gif"
           alt="icon"
           width="50"
           height="50"
